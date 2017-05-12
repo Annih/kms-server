@@ -18,6 +18,28 @@ The following cookbook is required as noted:
 
 * [windows](windows_cookbook) (> 1.36.1) to leverage the `windows_feature` resource
 
+
+## Usage
+
+Configure your `kms host key` and tweak other attributes.
+Then just add `kms-server::default` to your runlist.
+
+## Attributes
+
+Below attributes are available in `kms_server` root namespace.
+Most of them are adapted from https://technet.microsoft.com/library/dn502532
+
+Attribute                | Description                                       | Default value
+-------------------------|---------------------------------------------------|--------------
+`host_key`               | The *key* used to enable KMS Host service.        | **MANDATORY**
+`disable_dns_publishing` | Determine whether DNS publishing is disable.      | `false`
+`dns_publishing_domains` | List of domain used for DNS publishing.           | `[]`
+`reduce_kms_priority`    | Determine whether KMS priority should be lowered. | `false`
+`listening_port`         | KMS Tcp listening port.                           | `1688`
+`activation_interval`    | Activation interval in minutes.                   | `120`
+`renewal_interval`       | Renewal interval in minutes.                      | `10080`
+
+
 ## Contributing
 
 1. Fork the repository on Github
