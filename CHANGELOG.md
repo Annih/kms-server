@@ -3,6 +3,10 @@ kms-server CHANGELOG
 
 This file is used to list changes made in each version of the kms-server cookbook.
 
+## Version 0.3.0
+- Annih - Properly compare installed product key
+- Annih - Improve guard clause to avoid warning
+
 ## Version 0.2.0
 - Annih - Fix windows feature name for dism provider
 
