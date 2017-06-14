@@ -7,7 +7,7 @@ ruby_block 'Ensure kms host key is provided' do
 end
 
 # Enable KMS service
-windows_feature 'VolumeActivation'
+windows_feature 'VolumeActivation-Full-Role'
 
 # Configure the service
 registry_key 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform' do
