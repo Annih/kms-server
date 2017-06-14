@@ -3,7 +3,7 @@ return unless platform? 'windows'
 
 ruby_block 'Ensure kms host key is provided' do
   block { raise 'node[:kms_server][:host_key] is mandatory to setup Volume Activation service' }
-  not_if { node['kms_server']['host_key'] }
+  only_if { node['kms_server'].nil? || node['kms_server']['host_key'].nil? }
 end
 
 # Enable KMS service
