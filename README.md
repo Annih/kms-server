@@ -1,5 +1,7 @@
 # kms-server Cookbook
+[![Cookbook Version][cookbook_version]][supermarket_url]
 [![Build Status][build_status]][build_status]
+[![License][license]][license]
 
 Install and configure the Microsoft KMS server role.
 
@@ -71,3 +73,6 @@ limitations under the License.
 [annih]:            https://github.com/Annih
 [repository]:       https://github.com/Annih/kms-server
 [build_status]:     https://api.travis-ci.org/Annih/kms-server.svg?branch=master
+[cookbook_version]: https://img.shields.io/cookbook/v/kms-server.svg
+[license]:          https://img.shields.io/github/license/Annih/kms-server.svg
+[supermarket_url]:  https://supermarket.chef.io/cookbooks/kms-server
