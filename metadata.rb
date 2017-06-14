@@ -4,7 +4,7 @@ maintainer_email 'b.courtois@criteo.com'
 license          'Apache-2.0'
 description      'Installs/Configures kms-server'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.1.0'
+version          '0.2.0'
 supports         'windows', '>= 6.3'
 depends          'windows', '>= 1.36.1'
 
