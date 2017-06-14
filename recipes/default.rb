@@ -41,7 +41,7 @@ cscript.exe slmgr.vbs /ato
   not_if do
     require 'wmi-lite'
     licenses = ::WmiLite::Wmi.new.instances_of('SoftwareLicensingProduct')
-    licenses.any? { |e| e['LicenseStatus'] == 1 && e['ProductKeyChannel'] == 'Volume:CSVLK' && e['PartialProductKey'] == node['kms_server']['host_key'].last(5) }
+    licenses.any? { |e| e['LicenseStatus'] == 1 && e['ProductKeyChannel'] == 'Volume:CSVLK' && node['kms_server']['host_key'].end_with?(e['PartialProductKey']) }
   end
   notifies :stop, 'service[sppsvc]', :before
 end
