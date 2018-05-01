@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 name             'kms-server'
 maintainer       'Annih'
 maintainer_email 'b.courtois@criteo.com'

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # The Key used to enable KMS Host service
 default['kms_server']['host_key'] = nil
 

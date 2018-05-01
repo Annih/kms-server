@@ -1,6 +1,11 @@
+AllCops:
+  TargetRubyVersion: 2.3
 LineLength:
   Enabled: no
-Lint/EndAlignment:
+Layout/CaseIndentation:
+  EnforcedStyle: end
+  IndentOneStep: yes
+Layout/EndAlignment:
   EnforcedStyleAlignWith: variable
 MethodLength:
   Enabled: no
@@ -16,10 +21,9 @@ Metrics/LineLength:
   Enabled: no
 Metrics/PerceivedComplexity:
   Enabled: no
-Style/CaseIndentation:
-  EnforcedStyle: end
-  IndentOneStep: yes
 Style/TrailingCommaInArguments:
   EnforcedStyleForMultiline: consistent_comma
-Style/TrailingCommaInLiteral:
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: consistent_comma

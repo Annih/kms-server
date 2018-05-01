@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This cookbook does nothing on non-windows platform
 return unless platform? 'windows'
 
@@ -31,10 +33,10 @@ end
 
 # Setup the KMS Host Key and activate it
 batch 'Register and activate KMS key' do
-  code <<-EOH
-cscript.exe slmgr.vbs /ipk #{node['kms_server']['host_key']}"
-cscript.exe slmgr.vbs /ato
-  EOH
+  code <<~CMD
+    cscript.exe slmgr.vbs /ipk #{node['kms_server']['host_key']}"
+    cscript.exe slmgr.vbs /ato
+  CMD
   cwd 'C:\Windows\System32'
   sensitive true
   # http://msdn.microsoft.com/en-us/library/cc534596%28v=vs.85%29.aspx
